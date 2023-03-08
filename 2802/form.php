@@ -8,6 +8,9 @@
     case 2:
       echo 'voce não esta autenticado';
       break;
+    case 3:
+      echo 'voce saiu com sucesso';
+      break;
   }
 ?>
 <!DOCTYPE html>
