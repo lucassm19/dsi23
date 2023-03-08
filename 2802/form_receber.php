@@ -1,10 +1,13 @@
 <?php
     // form_receber.php
+    
+    $senha_cripto = '$2y$11$BHckbKUxX8Z8WQGgzrFVZOjFtilRRE6Z3FNLep3iPVMUXiNDAajCu';
+
     $usuario =  $_POST['usuario'] ?? false;
     $senha = $_POST['senha'] ?? false;
     // $_POST, mas precisa botar o method post no form 
     
-    if ($usuario == 'lucas' and  $senha == '123'){
+    if ($usuario == 'lucas' and  password_verify($senha, $senha_cripto)){
         // autenticação ok
         session_start();
         $_SESSION['usuario'] = $usuario;

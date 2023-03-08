@@ -4,3 +4,4 @@
     session_destroy();
 
     header('location:form.php?erro=3');
+?>
