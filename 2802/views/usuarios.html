@@ -1,0 +1,21 @@
+{% extends "_base.html" %}
+
+{% block conteudo %}
+<p>Esta é a página de usuários</p>
+
+<table border ="1">
+    <tr>
+        <th>usuario</th>
+        <th>admin</th>
+        <th>ativo</th>
+    </tr>
+    {% for usr in usuarios %}
+    <tr>
+        <th>{{ usr.username }}</th>
+        <th>{{ usr.admin ? 'Sim' : 'Não' }}</th>
+        <th>{{ usr.active ? 'Sim' : 'Não' }}</th>
+        <th><a href="usuarios_demitir.php?id={{ usr.id }}"</a>Demitir</th>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
