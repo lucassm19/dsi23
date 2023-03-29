@@ -1,0 +1,21 @@
+{% extends "_base.html" %}
+
+{% block conteudo %}
+<p>Esta é a página de produtos</p>
+
+<table border ="1">
+    <tr>
+        <th>Nome</th>
+        <th>Preço</th>
+        <th>Estoque</th>
+    </tr>
+    {% for prod in produtos %}
+    <tr>
+        <th>{{ prod.nome }}</th>
+        <th>{{ prod.preco }}</th>
+        <th>{{ prod.estoque }}</th>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
